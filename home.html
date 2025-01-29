@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+     crossorigin="anonymous">
+    <title>Safety's key</title>
+    <link href="atteles.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <header>
+      <div class="info-bar">
+        <div class="livraison">
+          Livraison Gratuite
+        </div>
+        <!-- Section Avis -->
+        <div class="avis">
+          <p><span class="Avis">Avis </span><span class="verifies">Verifiés
+          </span><span class="etoile">★★★★★</span><span> 17755 Avis</span></p>
+        </div>
+      </div>
+      <!--NavBar-->
+      <nav class="navbar navbar-expand-lg bg-transparent">
+        <div class="container-fluid">
+          <div class="navbar navbar-expand-xl">
+            <a class="logo" href="#">Safety<span>'</span>s key</a></i>
+          </div>
+          <div class="btn-group dropstart">
+            <button
+                 type="button"
+                  class="btn btn-primary dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <span class="navbar-toggler-icon" style="background-image: url(https://www.iconarchive.com/download/i111946/fa-team/fontawesome/FontAwesome-Bars.1024.png);"</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#Home">Home</a></li>
+              <li><a class="dropdown-item" href="#products">Produits</a></li>
+              <li><a class="dropdown-item" href="#Bénevolat">Bénévolat</a></li>
+            </ul>
+            <a href="panier.php"><img src="panier.png" class="panier"></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--section Home-->
+    <section id="Home">
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img1.jpg" class="d-block w-100">
+          </div>
+          <div class="carousel-item">
+            <img src="img2.jpg" class="d-block w-100" >
+          </div>
+          <div class="carousel-item">
+            <img src="img3.jpg" class="d-block w-100" >
+          </div>
+          <div class="carousel-item">
+            <img src="img4.jpg" class="d-block w-100" >
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    <!--section products-->
+    <section id="products">
+      <div class="services">
+        <div class="service">
+          <img src="livraison.png" alt="Livraison gratuite">
+          <p>Livraison Gratuite</p>
+        </div>
+        <div class="service">
+          <img src="clock.jpg" alt="Livraison express">
+          <p>Livraison express</p>
+        </div>
+        <div class="service">
+          <img class="secure" src="secure3.png" alt="Paiement sécurisé">
+          <p>Paiement sécurisé </p>
+        </div>
+        <div class="service">
+          <img src="Prixbas.png" alt="Programme fidélité">
+          <p>Prix réduits</p>
+        </div>
+        <div class="service">
+          <img src="Gift.jpg" alt="Programme fidélité">
+          <p>Offres & Promotions</p>
+        </div>
+      </div>
+      <!--product box-->
+      <div class="container">
+        <div class="product">
+          <div class="sale">-55%</div>
+          <img src="Armor.png">
+          <form method="POST" action="panier.php" class="details">
+            <h3 type="hidden" name="produit" value="ARMOR" >ARMOR </h3>
+            <p>Strabilisation optimale et protection des ligaments</p>
+            <input class="price" type="hidden" name="price" value="270">270 DT</input>
+            <span class="old-price">599,90 DT</span>
+            <p class="rating">★★★★★ 360 avis</p>
+            <button class="ajouter-panier" name="action" value="ajouter">Ajouter au panier</button>
+          </form>
+        </div>
+        <div class="product">
+          <img src="splint.png">
+          <form method="POST" action="panier.php" class="details">
+            <input type="hidden" name="produit" value="Splint" class="product-name">Splint </input>
+            <input class="price" type="hidden" name="price" value="300">300 DT</input>
+            <button class="ajouter-panier" name="action" value="ajouter">Ajouter au panier</button>
+          </form>
+        </div>
+        <div class="product">
+          <img src="attelle.png">
+          <form method="POST" action="panier.php" class="details">
+            <h3 type="hidden" name="produit" value="Grenouille">Attelle Grenouille</h3>
+            <p>Orthèse de repos ajustable pour la nuit et le soir pour enfants, légère et à construction bilatérale, conçue
+              pour étirer les tissus .</p>
+            <input class="price" type="hidden" name="price" value="300">300 DT</input>
+            <p class="rating">★★★★★ 330 avis</p>
+            <button class="ajouter-panier" name="action" value="ajouter">Ajouter au panier</button>
+          </form>
+        </div>
+        <div class="product">
+          <div class="sale">-30%</div>
+          <img src="bottle.png">
+          <form method="POST" action="panier.php" class="details">
+            <input type="hidden" name="produit" value="botte" class="product-name">Botte de marche</input>
+            <input class="price" type="hidden" name="price" value="570">570 DT</input>
+            <p class="rating">★★★★★ 360 avis</p>
+            <button class="ajouter-panier" name="action" value="ajouter">Ajouter au panier</button>
+          </form>
+        </div>
+        <div class="product">
+          <img src="genouillere.png">
+          <form method="POST" action="panier.php" class="details">
+            <h3 type="hidden" name="produit" value="gernouilliere" >Genouillére Reaction</h3>
+            <p>Assure l’immobilisation des articulations inter-phalangiennes proximales et distales.</p>
+            <input class="price" type="hidden" name="price" value="320">320 DT</input>
+            <p class="rating">★★★★★ 290 avis</p>
+            <button class="ajouter-panier" name="action" value="ajouter">Ajouter au panier</button>
+          </form>
+        </div>
+        <div class="product">
+          <img src="attelleAdepression.png">
+          <form method="POST" action="panier.php" class="details">
+            <h3 type="hidden" name="produit" value="attele">Attelle à dépression ATL-PSCC</h3>
+            <p>Elles sont compatibles avec l’utilisation des systèmes de traction et ne doivent pas être enlevées au moment
+            de faire des examens RX et scanner.</p>
+            <input class="price" type="hidden" name="price" value="500">500 DT</input>
+            <p class="rating">★★★★★ 340 avis</p>
+            <button class="ajouter-panier" name="action" value="ajouter">Ajouter au panier</button>
+          </form>
+        </div>
+        <div class="product">
+          <div class="sale">-5%</div>
+          <img src="OA.png">
+          <form method="POST" action="panier.php" class="details">
+            <h2 type="hidden" name="produit" value="OA">OA FullForce </h3>
+            <p>soulagement optimal des douleurs arthirosiques .</p>
+            <input class="price" type="hidden" name="price" value="760">760 DT</input>
+            <span class="old-price">800 DT</span>
+            <p class="rating">★★★★★ 360 avis</p>
+            <button class="ajouter-panier" name="action" value="ajouter">Ajouter au panier</button>
+          </form>
+        </div>
+        <div class="product">
+          <img src="orthese.jpg">
+          <form method="POST" action="panier.php" class="details">
+            <h3 type="hidden" name="produit" value="appareil">appareil cruro-pedieux de réduction genou varum / valgum à ridoire</h3>
+            <p>Le réglage progressif du ridoire permet une correction graduelle de la déviation .</p>
+            <input class="price" type="hidden" name="price" value="850">850 DT</input>
+            <p class="rating">★★★★★ 300 avis</p>
+            <button class="ajouter-panier" name="action" value="ajouter">Ajouter au panier</button>
+          </form>
+        </div>
+      </div>
+      <!--Personaliser vos  attelles-->
+      <div class="personaliser">
+        <h1>Personnalisez Votre Attelle à Votre Goût</h1>
+        <div class="features">
+            <div class="feature">
+              <i>✏️</i>
+              <h3>Couleurs</h3>
+              <p>Choisissez parmi une variété de couleurs pour une attelle qui reflète votre style.</p>
+            </div>
+            <div class="feature">
+              <i>⭐</i>
+              <h3>Motifs</h3>
+              <p>Ajoutez des motifs ou des dessins uniques pour personnaliser votre attelle.</p>
+            </div>
+            <div class="feature">
+              <i>🔤</i>
+              <h3>Texte</h3>
+              <p>Ajoutez du texte personnalisé pour rendre votre attelle vraiment unique.</p>
+            </div>
+        </div>
+      </div>
+    </section>
+    <!--section valenteer-->
+    <section id="Bénevolat">
+      <div class="slider-container">
+        <div class="menu">
+          <label for="slide-dot-1"></label>
+          <label for="slide-dot-2"></label>
+          <label for="slide-dot-3"></label>
+        </div>
+
+        <input class="slide-input" id="slide-dot-1" type="radio" name="slides" checked>
+        <div class="slide-img">
+          <div class="anonce">
+            <div class="text-section">
+              <h1>Attelles Médicales:</br>Qualité & Solidarité</h1>
+              <p>rejoignez notre initiative pour aider les plus démunis en donnant vos attelles usagées .
+              </p>
+          </div>
+          <div class="image-section">
+            <img src="fille-souriante.jpg" >
+          </div>
+          </div>
+        </div>
+        <input class="slide-input" id="slide-dot-2" type="radio" name="slides">
+        <div class="slide-img">
+          <div class="donner">
+            <img src="donner.jpg" >
+            <h1>Donnons une seconde</br> vie aux orthèses et attelles </h1>
+          </div>
+        </div>
+        <input class="slide-input" id="slide-dot-3" type="radio" name="slides">
+        <div class="slide-img">
+          <div class="ready">
+            <h2>Êtes-vous prêt à donner une seconde vie à vos attelles usagées</br> et à soutenir ceux 
+            qui en ont besoin ? </h2>
+            <p>Voulez-vous jouer un rôle dans l’amélioration des conditions de vie des plus démunis 
+            tout en offrant une seconde chance à vos attelles usagées ? Participez à cette initiative 
+            solidaire dès maintenant et contribuez à un avenir plus inclusif et durable !</p>
+            <button class="action">Passez à l'action</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--footer start-->
+    <footer>
+      <div class="contact">
+        <h1>Contactez-nous pour des Conseils d'Experts</h1>
+        <section class="contact-container">
+            <a href="contact.html" class="contact-card">
+            <div class="icon">📞</div>
+              <h2>Service Client</h2>
+              <p>Notre équipe est disponible pour répondre à vos questions et vous fournir des conseils personnalisés.</p>
+            </a>
+            <a href="contact.html" class="contact-card">
+              <div class="icon">💡</div>
+              <h2>Conseils d'Experts</h2>
+              <p>Obtenez des recommandations sur le choix de l'attelle la mieux adaptée à vos besoins.</p>
+            </a>
+            <a href="contact.html" class="contact-card">
+              <div class="icon">🛠️</div>
+              <h2>Support Technique</h2>
+              <p>Obtenez de l'aide pour l'utilisation et l'entretien de votre attelle.</p>
+            </a>
+        </section>
+      </div>
+    </div>
+    <!--section rejignez-nous-->
+    <div class="rejoignez">
+      <div class="newsletter">
+        <p>Abonnez-vous à la newsletter et recevez une surprise dans votre boîte mail.</p>
+        <form>
+          <input type="email" placeholder="Entrez votre adresse email...">
+          <button>GO</button>
+        </form>
+      </div>
+      <div class="social">
+          <p class="newsletter">Suivez-nous</p>
+          <div class="social-img">
+            <img src="facebook.png" >
+            <img src="instagram.png">
+            <img src="youtubepng.png">
+            <img src="linkedin.jpg">
+          </div>
+      </div>
+    </div>
+    <div class="rejoignez">
+      <div class="newsletter">
+        <p>Les garanties de Safety's key</p>
+        <div class="garanties">
+          <div class="reward">
+            <img src="livraison.png">
+            <p>Livraison Gratuite</p>
+          </div>
+          <div class="reward">
+            <img src="horlage.jpg">
+            <p>Livraison express</p>
+          </div>
+          <div class="reward">
+            <img src="secure3.png">
+            <p>Paiment Sécurisé</p>
+          </div>
+          <div class="reward">
+            <img src="Prixbas.png">
+            <p>Prix réduits</p>
+          </div>
+          <div class="reward">
+            <img src="Gift.jpg">
+            <p>Offres & Promotions</p>
+          </div>
+        </div>
+      </div>
+      <div class="Contact">
+        <div class="Contactez">Contactez-nous</div>
+        <div class="pro-offer">+216 99 999 999</div>
+      </div>
+    </div>
+    <div class="create"> 
+      created by<span> Syrine Ben Amor: University Student </span> 
+    </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+    crossorigin="anonymous"></script>
+</body>
+</html>
