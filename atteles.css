@@ -1,0 +1,651 @@
+html {
+  font-size: 80%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  overflow-x: hidden;}
+/*header style*/
+header {
+  position: fixed;
+  background: white;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  border-bottom: 0.5rem solid rgba(0, 0, 0, 0.1) ;
+  z-index: 1000;
+}
+/* Section Livraison */
+.livraison {
+  background: #abddfeac;
+  color: deepskyblue;
+  padding: 8px 15px;
+  font-size: 20px;
+  padding-right: 30%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding-left: 30%;
+}
+/* Section Avis */
+.avis {
+  background: rgb(1, 1, 58);
+  color: white;
+  font-size: 20px;
+  padding-left: 50%;
+  padding-top: 0.01%;
+  padding-bottom: 0.01%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.Avis {
+  color: #f39c12;
+  font-family: "Sofia", sans-serif;
+  font-size: 19x;
+}
+.verifies {
+  font-family: "Sofia", sans-serif;
+  font-size: 19px;
+}
+.etoile {
+  color: #f39c12;
+}
+/*NavBar*/
+.dropdown-item:hover {
+  background-color: rgb(7, 113, 165);
+  color: white;
+}
+.logo {
+  font-size: 40px;
+  text-decoration: none;
+  color: #031560;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.logo:hover {
+  color: #031560;
+}
+.logo span {
+  color: deepskyblue;
+}
+.panier {
+  width: 150px;
+  padding-left: 18%;
+  padding-right: 40%;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 3rem;
+  height:3rem;
+  position: relative;
+  background-color: #1c87c9; /* Change la couleur d'arrière-plan */
+  border-radius: 50%; /* Optionnel : donne une forme arrondie */
+  transform: translateY(80px);
+}
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  background-color: #00a8e8; /* Change la couleur au survol */
+}
+.carousel-item {
+  position: relative; 
+  padding-top: 190px; 
+  top: 20%; 
+  transition: ease-in;
+  animation: slidein;
+  animation-duration: 1.3s;
+  animation-fill-mode: forwards;
+}
+@keyframes slidein { /*animation definition*/
+  from {
+    margin-left: 100%;
+  }
+}
+/*section service*/
+.services {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 80px;
+  padding-top: 3px;
+}
+.services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 50px;
+}
+.service {
+  text-align: center;
+  flex-shrink: 0;
+  width: 150px;
+}
+.service img {
+  width: 60px;
+  height: auto;
+  margin-bottom: 7px;
+}
+.secure {
+  padding-top: 2.5%;
+}
+.service p {
+  font-size: 14px;
+  color: #4c4c4c;
+  margin: 0;
+  line-height: 1.4;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/*products*/
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+.product {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 250px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.product img {
+  width: 100%;
+  height: auto;
+}
+.product .details {
+  padding: 15px;
+}
+.product .details h3 {
+  font-size: 20px;
+  margin: 0 0 10px;
+  color: #030321;
+  text-transform: capitalize;
+}
+.product .details p {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 15px;
+}
+.product .details .price {
+  font-size: 16px;
+  color: #030321;
+  font-weight: bold;
+}
+.product .details .old-price {
+  font-size: 14px;
+  color: #e63946;
+  text-decoration: line-through;
+  margin-left: 8px;
+}
+.product .details .rating {
+  color: #f39c12;
+  font-size: 14px;
+}
+.sale {  /*sale*/
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #f63041;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+.container .product:hover {
+  transform: scale(1.1);
+  border-color: rgb(56, 50, 248);
+}
+/*ajouer-panier*/
+.ajouter-panier {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 265px;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  margin-left: 4%;
+  margin-right: 4%;
+  border-radius: 7%;
+  background: rgb(34, 129, 253);
+  color: white;
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+.product:hover .ajouter-panier {
+  opacity: 1;
+}
+.ajouter-panier:hover {
+  color: rgb(3, 86, 116);
+}
+.personaliser { /*personaliser votre attelles style*/
+  text-align: center;
+  margin-top: 2%;
+  color: #fff;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: flex-start; 
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 2000px; 
+  height: 500px;
+  background-image: url("color.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  position: relative;
+  } 
+  .personaliser::after { /*reduire la luminosite du backround*/ 
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(1, 54, 1, 0.308); /* Calque sombre */
+  z-index: 1; /* Assurez-vous que ce calque est en dessous du texte et du bouton */
+  }
+
+.personaliser h1 {
+  position: relative;
+  transform: translateY(-50%);
+  font-size: 4rem;
+  margin-bottom: 20px;
+  z-index: 2;
+  padding-left: 5.4%;
+  font-weight: 500;
+}
+.features {
+  display: flex;
+  padding-left: 4.5%;
+  gap: 150px;
+  flex-wrap: wrap;
+  z-index: 2;
+}
+.feature {
+  max-width: 400px;
+  text-align: center;
+}
+.feature i {
+  font-size: 3rem;
+}
+.feature h3 {
+  font-size: 3rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.feature p {
+  font-size: 1.5rem;
+}
+/*section valenteer*/
+#Bénevolat {
+  padding-top: 2%;
+}
+/*diapo img*/
+.slider-container { /* Conteneur général du slider */
+  max-width: 2000px;
+  position: relative;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 600px;
+  overflow: hidden;
+}
+.menu { /* Menu des boutons de navigation */
+  position: absolute;
+  left: 0;
+  z-index: 11;
+  width: 100%;
+  bottom: 0;
+  margin-left: 43%;
+}
+.menu label {
+  cursor: pointer;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border-radius: 50px;
+  margin: 0 0.2em 1em;
+}
+.menu label:hover,
+.menu label:focus {
+  background: #1c87c9;
+}
+.slide-img { /* Style des diapositives */
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 10;
+  transition: left 0s 0.75s;
+}
+[id^="slide"]:checked + .slide-img { /* Afficher la bonne diapositive */
+  left: 0;
+  z-index: 100;
+  transition: left 0.65s ease-out;
+}
+/*Anonce style*/
+.anonce {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(240, 247, 250);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 2000px;
+  height: 500px;
+}
+.text-section {
+  margin-top: 8%;
+  padding: 20px;
+  flex: 1;
+}
+.text-section h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #333333;
+  font-family: "Gill Sans Extrabold", sans-serif;
+  font-weight: 500;
+}
+.text-section p {
+  margin-top: 9%;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #666666;
+}
+.image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(10deg, rgb(112, 206, 220)20%, rgb(200, 242, 84) );
+}
+.image-section img {
+  max-width: 90%;
+  height: 500px;
+  border-radius: 8px;
+}
+/*donner style*/
+.donner {
+  display: flex;
+  flex-direction: row;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 2000px;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+.donner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: contrast(0.6); /* Reduire le contrast de l' image */
+}
+.donner h1 {
+  position: absolute;
+  top: 50%;
+  left: 4%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 60px;
+  font-weight: bolder;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+/*Ready style*/
+.ready {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: flex-start; 
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 2000px; 
+  height: 500px;
+  background-image: url("ready.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  position: relative;
+} 
+.ready::after { /*reduire la luminosite du backround*/ 
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.376); /* Calque sombre */
+  z-index: 1; /* Assurez-vous que ce calque est en dessous du texte et du bouton */
+}
+.ready h2,.ready p { /* Le texte est au-dessus du calque sombre */
+  position: relative;
+  z-index: 2;
+}
+.ready h2 {
+  position: absolute;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 50px;
+  font-weight: bolder;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: "Times New Roman", Times, serif;
+  margin: 0;
+}
+.ready p {
+  font-size: 18px;
+  color: rgb(236, 235, 235);
+  font-family: sans-serif;
+  margin-top: 170px;
+}
+.ready .action { /*boutton style */
+  display: inline-block;
+  margin-top: 2rem;
+  border-radius: 5rem;
+  background: rgb(4, 165, 214);
+  color: white;
+  padding: 0.5rem 3.5rem;
+  font-size: 1.7rem;
+  font-weight: 400;
+  border: 2px solid transparent;
+  position: relative; /* Garantit que le bouton soit dans le bon contexte de superposition */
+  z-index: 3; /* S'assurer que le bouton soit au-dessus de tout autre élément */
+}
+.ready .action:hover {
+  background-color: white;
+  color: rgb(4, 165, 214);
+  border:2.5px solid rgb(4, 165, 214) ;
+}
+/*footer*/
+footer{
+  padding-top: 1.1%;
+}
+/* contactez-nous section*/
+.contact {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 2rem;
+  position: relative; /* Nécessaire pour les pseudo-éléments */
+  height: 530px;
+  box-sizing: border-box;
+  background-image: url('conseil.png'); /* Remplacez par le chemin de votre image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.contact::before, 
+.contact::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* S'assurer que ces calques sont derrière le contenu */
+}
+.contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#e0f7e9d5, #e1ecf7d5);
+  z-index: 0; /* Place le dégradé derrière le contenu */
+}
+/* Positionnement du contenu au-dessus des calques */
+.contact h1,
+.contact-container {
+  position: relative;
+  z-index: 1; /* S'assurer que le contenu est au-dessus des calques */
+}
+.contact h1 {
+text-align: center;
+color: white;
+font-size: 4rem;
+font-weight: bold;
+padding-top: 2%;
+}
+/* Section de cartes */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  gap: 8rem;
+  padding-top: 3%;
+}
+.contact-card {
+  background-color: white;
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+  text-align: center;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  max-width: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+.contact-card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #4caf50;
+}
+.contact-card h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333;
+}
+.contact-card p {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.5;
+}
+/*rejoignez-nous section*/
+.rejoignez {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #103761;
+}
+.newsletter {
+  flex: 1;
+  margin: 0 10px;
+  padding-left: 3%;
+  font-size: 22px;
+  color: rgb(241, 159, 6);
+  font-weight: bold;
+}
+.newsletter input {
+  padding: 10px;
+  border-radius: 10px;
+  margin-right: 5px;
+  font-size: 1.7rem;
+  color: #333;
+  text-transform: initial;
+  border: 0.1rem solid rgba(0,0,0,0.1);
+  width: 58%;
+}
+.newsletter button {
+  padding: 16px;
+  border: none;
+  background-color: #00a8e8;
+  color: white;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.social {
+  padding-right: 5%;
+  color: white;
+  font-size: 20px;
+}
+.social p {
+  margin-bottom: 10px;
+}
+.social-img {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.social-img img {
+  width: 80px;
+  height: 80px;
+}
+.garanties{
+  display: flex;
+  gap: 30px;
+}
+.garanties img{
+  width: 90px;
+}
+.reward{
+  background-color: rgb(194, 232, 250);
+  border-radius: 10px;
+  padding: 7px;
+}
+.garanties p{
+  text-align: center;
+  color: #021e3a;
+  padding-top: 1%;
+}
+.Contact {
+  padding-top: 2%;
+  padding-right: 10%;
+}
+.Contact .Contactez {
+  color: rgb(241, 159, 6);
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: 500;
+  font-style: oblique;
+}
+.Contact .pro-offer {
+  background-color: #00e8b6;
+  color: #000000;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 22px;
+  margin-top: 1rem;
+  border-radius: 5rem;
+  padding: 0.7rem 3.7rem;
+}
+/*created by style*/
+.create{
+  text-align: center;
+  font-size: 24px;
+  text-transform: uppercase;
+  background-color: rgba(25, 61, 99);
+  color:white;
+}
+.create span{
+  color: deepskyblue;}
