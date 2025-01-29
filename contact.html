@@ -1,0 +1,170 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <title>Safety's key</title>
+</head>
+<style>
+html {
+  font-size: 80%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  overflow-x: hidden;}
+body {
+    background: linear-gradient(#e0f7e9d5, #e1ecf7d5);
+    font-family: 'Poppins', sans-serif;
+}
+#form {
+    width: 350px;
+    margin: 20vh auto 0 auto;
+    padding: 20px;
+    background-color: rgb(229, 229, 229);
+    border-radius: 4px;
+    font-size: 12px;
+}
+#form h1 {
+    color: #0f2027;
+    text-align: center;
+}
+#form button {
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    color: white;
+    background-color: rgb(41, 57, 194);
+    border: none;
+    border-radius: 4px;
+}
+.input-control {
+    display: flex;
+    flex-direction: column;
+}
+.input-control input {
+    border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-size: 18px;
+	padding: 10px;
+	width: 100%;
+}
+.input-control.success input {
+    border-color: #09c372;
+}
+.input-control.error input {
+    border-color: #ff3860;
+}
+.input-control .error {
+    color: #ff3860;
+    font-size: 12px;
+    height: 13px;
+}
+p,span{
+    color: rgb(242, 8, 8);
+    font-size: 13px;
+}
+</style>
+<body>
+    <div class="container">
+        <form id="form" action="contact.php" method="post">
+            <h1>Contact Us</h1>
+            <p> *: indique un champ obligatoire</p>
+            <div class="input-control">
+                <label>Name <span>*</span></label>
+                <input id="username" name="username" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label >Email <span>*</span></label>
+                <input id="email" name="email" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label>Phone Number <span>*</span></label>
+                <input id="phone"name="phone" type="text">
+                <div class="error"></div>
+            </div>
+            <br>
+            <textarea class="box" placeholder="message" cols="44" rows="10" name="msg"></textarea>
+            <button class="btn" type="submit" > Send message</button>
+        </form>
+    </div>
+    <script>
+        const form = document.getElementById('form');
+        const username = document.getElementById('username');
+        const email = document.getElementById('email');
+        const phone = document.getElementById('phone');
+    
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            const isValid = validateInputs();
+            
+            if (isValid) {
+                form.submit();
+            }
+        });
+    
+        const setError = (element, message) => {
+            const inputControl = element.parentElement;
+            const errorDisplay = inputControl.querySelector('.error');
+    
+            errorDisplay.innerText = message;
+            inputControl.classList.add('error');
+            inputControl.classList.remove('success');
+        };
+    
+        const setSuccess = element => {
+            const inputControl = element.parentElement;
+            const errorDisplay = inputControl.querySelector('.error');
+    
+            errorDisplay.innerText = '';
+            inputControl.classList.add('success');
+            inputControl.classList.remove('error');
+        };
+    
+        const validateInputs = () => {
+            const usernameValue = username.value.trim();
+            const emailValue = email.value.trim();
+            const phoneValue = phone.value.trim();
+    
+            let isFormValid = true; 
+            const nameRegex = /^[a-zA-ZÀ-ÿ\s-]+$/;
+            if (usernameValue === '') {
+                setError(username, 'Le nom est requis');
+                isFormValid = false;
+            } else if (!nameRegex.test(usernameValue)) {
+                setError(username, 'Le nom ne doit contenir que des lettres');
+                isFormValid = false;
+            } else {
+                setSuccess(username);
+            }
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (emailValue === '') {
+                setError(email, 'L\'email est requis');
+                isFormValid = false;
+            } else if (!emailRegex.test(emailValue)) {
+                setError(email, 'Format d\'email invalide');
+                isFormValid = false;
+            } else {
+                setSuccess(email);
+            }
+            const phoneRegex = /^[0-9]{8,15}$/;
+            if (phoneValue === '') {
+                setError(phone, 'Le numéro de téléphone est requis');
+                isFormValid = false;
+            } else if (!phoneRegex.test(phoneValue)) {
+                setError(phone, 'Le numéro de téléphone doit contenir entre 8 et 15 chiffres');
+                isFormValid = false;
+            } else {
+                setSuccess(phone);
+            }
+    
+            return isFormValid;
+        };
+    </script>
+    
+</body>
+</html>
